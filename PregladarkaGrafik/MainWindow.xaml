@@ -1,0 +1,43 @@
+﻿<Window x:Class="PregladarkaGrafik.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PregladarkaGrafik"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <UniformGrid Rows="4">
+        <StackPanel>
+            <Image x:Name="zdjecieGlowne" Source="trump.jpg" Width="150" Height="150"/>
+        </StackPanel>
+        <StackPanel>
+            <UniformGrid Columns="3" Rows="2">
+              
+                    <StackPanel>
+                    <Button Click="Button_Click_Lewo" Height="40" Width="40">Lewo</Button>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock x:Name="TextBox_LiczbaWyswietlen">Liczba wyświetleń: 0</TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <Button Click="Button_Click_Prawo" Width="40" Height="40">Prawo</Button>
+                </StackPanel>
+            </UniformGrid>
+        </StackPanel>
+        <StackPanel>
+            <Button Click="Button_Click_Polubienie" Width="100">Polub</Button>
+        </StackPanel>
+        <StackPanel>
+            <UniformGrid Rows="2">
+                <StackPanel>
+                    <TextBlock  x:Name="TextBox_LiczbaPolubien">Liczba polubień: 0</TextBlock>
+                </StackPanel>
+                <StackPanel>
+                    <Button Width="100" Click="Button_Click_Zamknij">Zamknij</Button>
+                </StackPanel>
+                
+                
+            </UniformGrid>
+        </StackPanel>
+    </UniformGrid>
+</Window>
