@@ -91,8 +91,14 @@ namespace PregladarkaGrafik
 
         private void Button_Click_Zamknij(object sender, RoutedEventArgs e)
         {
-        
-
+            StreamWriter streamWriter = new StreamWriter("zdjeciaDokatalogu.txt");
+            for(int i = 0; i<Zdjecia.Count; i++)
+            {
+                streamWriter.WriteLine(Zdjecia[i].NazwaZdjecia);
+                streamWriter.WriteLine(Zdjecia[i].LiczbaWyswietlen);
+                streamWriter.WriteLine(Zdjecia[i].LiczbaPolubien);
+            }
+           streamWriter.Close();
             Close();
         }
     }
